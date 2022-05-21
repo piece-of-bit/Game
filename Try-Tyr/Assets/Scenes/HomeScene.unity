@@ -286,7 +286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 29887446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &29887446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 271222852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &271222852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,7 +1488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 328038436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &328038436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2515,8 +2551,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1217062832}
-        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+      - m_Target: {fileID: 390836457}
+        m_TargetAssemblyTypeName: Spawn, Assembly-CSharp
+        m_MethodName: SpawnNeedObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7604657177488462210, guid: bdc298661de05a0428d6997bba7d7368, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1897413240}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: Go
         m_Mode: 1
         m_Arguments:
@@ -2781,7 +2829,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 977474023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 390836457}
+        m_TargetAssemblyTypeName: Spawn, Assembly-CSharp
+        m_MethodName: SpawnNeedObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7604657177488462210, guid: bdc298661de05a0428d6997bba7d7368, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1897413240}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: Go
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &977474023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2855,10 +2927,10 @@ RectTransform:
   m_Father: {fileID: 1108912835}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -234.01077, y: 84.15454}
-  m_SizeDelta: {x: 289.97852, y: 99.14389}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -23.830002}
+  m_SizeDelta: {x: -130.94, y: -116.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020005305
 MonoBehaviour:
@@ -3198,8 +3270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: 59.13153}
-  m_SizeDelta: {x: 2594.22, y: 683.8}
+  m_AnchoredPosition: {x: -0.000061035156, y: 55.51}
+  m_SizeDelta: {x: 2594.22, y: 818.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064790740
 MonoBehaviour:
@@ -3282,8 +3354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0014648438}
-  m_SizeDelta: {x: -174.76, y: -1518.3}
+  m_AnchoredPosition: {x: 0, y: -15.099976}
+  m_SizeDelta: {x: -174.76, y: -1488.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1116470261
 GameObject:
@@ -3776,7 +3848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1227115635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1227115635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,7 +4115,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294744789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1294744789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4553,7 +4649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1352557983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1352557983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4755,7 +4863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1359564948}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1217062832}
+        m_TargetAssemblyTypeName: ConfirmationScript, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1359564948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5487,8 +5607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0.001525879}
-  m_SizeDelta: {x: 905.24, y: 401.67004}
+  m_AnchoredPosition: {x: -0.000061035156, y: -7.5220976}
+  m_SizeDelta: {x: 905.24, y: 416.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673158458
 MonoBehaviour:
@@ -6488,7 +6608,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2014166946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 390836457}
+        m_TargetAssemblyTypeName: Spawn, Assembly-CSharp
+        m_MethodName: SpawnNeedObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7604657177488462210, guid: bdc298661de05a0428d6997bba7d7368, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1897413240}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: Go
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2014166946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6744,7 +6888,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2038681594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 390836457}
+        m_TargetAssemblyTypeName: Spawn, Assembly-CSharp
+        m_MethodName: SpawnNeedObj
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7604657177488462210, guid: bdc298661de05a0428d6997bba7d7368, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1897413240}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: Go
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2038681594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6971,9 +7139,9 @@ RectTransform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 233.02039, y: 84.15454}
-  m_SizeDelta: {x: 289.95908, y: 99.14389}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -23.84497}
+  m_SizeDelta: {x: -130.84, y: -116.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050438670
 MonoBehaviour:

@@ -24,28 +24,25 @@ public class ConfirmationScript : MonoBehaviour
         {
             Choice_Text.text = "Вы действительно хотите приобрести самолет за 1000?";
             Confirmation_window.SetActive(true);
+            BUY = false;
         }
         else if (UPGRADE)
         {
             Choice_Text.text = "Вы действительно хотите улучшить самолет за 1000";
             Confirmation_window.SetActive(true);
+            UPGRADE = false;
         }
         if (PressYES)
         {
             Choice_Text.text = "кнопка да - рабоатет";
             Confirmation_window.SetActive(false);
-            if (BUY)
-            {
-                Confirmation_window.SetActive(false);
-            }
-            UPGRADE = false;
+            PressYES = false;
         }
         if (PressNO)
         {
             Choice_Text.text = "кнопка нет - рабоатет";
             Confirmation_window.SetActive(false);
-            BUY = false;
-            UPGRADE = false;
+            PressNO = false;
         }
     }
     public void Yes()
