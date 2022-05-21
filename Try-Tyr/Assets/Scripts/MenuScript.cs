@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
     bool PressOpen;
     bool PressClose;
+    bool PressGO;
     public RectTransform slider;
     Vector2 v;
     // Start is called before the first frame update
@@ -35,6 +37,15 @@ public class MenuScript : MonoBehaviour
                 PressClose = false;
             }
         }
+        if (PressGO)
+        {
+            v.y = 0f;
+            slider.anchorMax = v;
+            if (slider.anchorMax.y <= 0f)
+            {
+                PressGO = false;
+            }
+        }
     }
     public void Open()
     {
@@ -43,5 +54,9 @@ public class MenuScript : MonoBehaviour
     public void Close()
     {
         PressClose = true;
+    }
+    public void Go()
+    {
+        PressGO = true;
     }
 }

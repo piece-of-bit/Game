@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    bool PressButton;
-    void Update()
+    void Start()
     {
-        if (PressButton)
-        {
-            Destroy(gameObject);
-        }
+        StartCoroutine(DestroyObj());
     }
-    public void Click()
+    IEnumerator DestroyObj()
     {
-        PressButton = true;
+        yield return new WaitForSeconds(5.0f);
+        Destroy(gameObject);
     }
 }
