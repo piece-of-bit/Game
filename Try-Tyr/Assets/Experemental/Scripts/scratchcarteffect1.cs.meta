@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 4140f0ef69c940448878201cac23f89b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Prize1: {fileID: 5562060009871192935, guid: 73aeb41d3cc2f404881e29d91b38f6b1, type: 3}
+  - Prize2: {fileID: 1536889975137310751, guid: 3f2cdc0cce2de054e84f21be47c45af4, type: 3}
+  - Prize3: {fileID: 7547855917031976417, guid: 03405330aa144a8449748d46db35f882, type: 3}
+  - Prize4: {fileID: 8259493559936465428, guid: e43d504e2f2cd214f8535bcda48e801b, type: 3}
+  - Prize5: {fileID: 7161286685167957649, guid: 99a0bf7d3a02d1243b1e0f04b29d2fdd, type: 3}
+  - maskPrefab1: {fileID: 3253368709606454979, guid: 3db503b6424ae4e41b0a99b041eddc5b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
