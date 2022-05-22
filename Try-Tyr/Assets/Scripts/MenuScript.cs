@@ -54,6 +54,7 @@ public class MenuScript : MonoBehaviour
             }
 
         }
+        
     }
     public void Open()
     {
@@ -72,5 +73,6 @@ public class MenuScript : MonoBehaviour
     {
         yield return new WaitForSeconds(4.0f);
         Panel.SetActive(false);
+        
     }
 }

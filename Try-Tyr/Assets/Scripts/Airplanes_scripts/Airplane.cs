@@ -6,14 +6,20 @@ public class Airplane : MonoBehaviour
 {
     public Score money;
     public ConfirmationScript text_for_confirm;
+    public GameObject A1GO;
+    public GameObject A2GO;
+    public GameObject A3GO;
+    public GameObject A1BACK;
+    public GameObject A2BACK;
+    public GameObject A3BACK;
     [SerializeField] private GameObject YES;
     [SerializeField] private GameObject ICON;
     [SerializeField] private GameObject GO;
     [SerializeField] private GameObject UPGRADE;
-    bool yes = false;
-    bool no = false;
-    bool upgrade = false;
-    bool in_fly = false;
+    bool yes;
+    bool no;
+    bool upgrade;
+    bool in_fly;
     public Text Score_text;
     int lvl_upgrade = 1;
     double win_scale = 1;
@@ -27,6 +33,18 @@ public class Airplane : MonoBehaviour
     {
         in_fly = true;
         StartCoroutine(Fly_Time());
+        if (lvl_upgrade == 1)
+        {
+            Instantiate(A1GO);
+        }
+        else if (lvl_upgrade == 2)
+        {
+            Instantiate(A2GO);
+        }
+        else if (lvl_upgrade == 3)
+        {
+            Instantiate(A3GO);
+        }
     }
     private void Yes()
     {
@@ -40,7 +58,7 @@ public class Airplane : MonoBehaviour
     void Update()
     {
         //ограничение уровня апгрейда
-        if (lvl_upgrade > 3)
+        if (lvl_upgrade > 2)
         {
             UPGRADE.GetComponent<Button>().interactable = false;
             UPGRADE.GetComponent<Button>().enabled = false;
@@ -122,6 +140,18 @@ public class Airplane : MonoBehaviour
     {
         yield return new WaitForSeconds(10.0f);
         money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale;
+        if(lvl_upgrade == 1)
+        {
+            Instantiate(A1BACK);
+        }
+        else if(lvl_upgrade == 2)
+        {
+            Instantiate(A2BACK);
+        }
+        else if (lvl_upgrade == 3)
+        {
+            Instantiate(A3BACK);
+        }
         in_fly = false;
     }
 }

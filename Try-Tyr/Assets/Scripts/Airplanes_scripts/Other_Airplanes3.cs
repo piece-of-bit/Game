@@ -6,6 +6,12 @@ public class Other_Airplanes3 : MonoBehaviour
 {
     public Score money;
     public ConfirmationScript text_for_confirm;
+    public GameObject A1GO;
+    public GameObject A2GO;
+    public GameObject A3GO;
+    public GameObject A1BACK;
+    public GameObject A2BACK;
+    public GameObject A3BACK;
     [SerializeField] private GameObject YES;
     [SerializeField] private GameObject ICON;
     [SerializeField] private GameObject GO;
@@ -29,6 +35,18 @@ public class Other_Airplanes3 : MonoBehaviour
     {
         in_fly3 = true;
         StartCoroutine(Fly_Time3());
+        if (lvl_upgrade3 == 1)
+        {
+            Instantiate(A1GO);
+        }
+        else if (lvl_upgrade3 == 2)
+        {
+            Instantiate(A2GO);
+        }
+        else if (lvl_upgrade3 == 3)
+        {
+            Instantiate(A3GO);
+        }
     }
     public void ClickBuyButton3()
     {
@@ -60,7 +78,7 @@ public class Other_Airplanes3 : MonoBehaviour
             BUY.SetActive(true);
         }
         //Ó„‡ÌË˜ÂÌËÂ ÛÓ‚Ìˇ ‡Ô„ÂÈ‰‡
-        if (lvl_upgrade3 > 3)
+        if (lvl_upgrade3 > 2)
         {
             UPGRADE.GetComponent<Button>().interactable = false;
             UPGRADE.GetComponent<Button>().enabled = false;
@@ -141,6 +159,18 @@ public class Other_Airplanes3 : MonoBehaviour
     {
         yield return new WaitForSeconds(8.0f);
         money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale3;  // œŒ–¿¡Œ“¿“‹ — Õ¿√–¿ƒ¿Ã»
+        if (lvl_upgrade3 == 1)
+        {
+            Instantiate(A1BACK);
+        }
+        else if (lvl_upgrade3 == 2)
+        {
+            Instantiate(A2BACK);
+        }
+        else if (lvl_upgrade3 == 3)
+        {
+            Instantiate(A3BACK);
+        }
         in_fly3 = false;
     }
 }

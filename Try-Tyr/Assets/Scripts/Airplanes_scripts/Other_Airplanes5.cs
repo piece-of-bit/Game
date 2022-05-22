@@ -6,6 +6,12 @@ public class Other_Airplanes5 : MonoBehaviour
 {
     public Score money;
     public ConfirmationScript text_for_confirm;
+    public GameObject A1GO;
+    public GameObject A2GO;
+    public GameObject A3GO;
+    public GameObject A1BACK;
+    public GameObject A2BACK;
+    public GameObject A3BACK;
     [SerializeField] private GameObject YES;
     [SerializeField] private GameObject ICON;
     [SerializeField] private GameObject GO;
@@ -29,6 +35,18 @@ public class Other_Airplanes5 : MonoBehaviour
     {
         in_fly5 = true;
         StartCoroutine(Fly_Time5());
+        if (lvl_upgrade5 == 1)
+        {
+            Instantiate(A1GO);
+        }
+        else if (lvl_upgrade5 == 2)
+        {
+            Instantiate(A2GO);
+        }
+        else if (lvl_upgrade5 == 3)
+        {
+            Instantiate(A3GO);
+        }
     }
     public void ClickBuyButton5()
     {
@@ -60,7 +78,7 @@ public class Other_Airplanes5 : MonoBehaviour
             BUY.SetActive(true);
         }
         //ограничение уровня апгрейда
-        if (lvl_upgrade5 > 3)
+        if (lvl_upgrade5 > 2)
         {
             UPGRADE.GetComponent<Button>().interactable = false;
             UPGRADE.GetComponent<Button>().enabled = false;
@@ -141,6 +159,18 @@ public class Other_Airplanes5 : MonoBehaviour
     {
         yield return new WaitForSeconds(8.0f);
         money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale5;
+        if (lvl_upgrade5 == 1)
+        {
+            Instantiate(A1BACK);
+        }
+        else if (lvl_upgrade5 == 2)
+        {
+            Instantiate(A2BACK);
+        }
+        else if (lvl_upgrade5 == 3)
+        {
+            Instantiate(A3BACK);
+        }
         in_fly5 = false;
     }
 }
