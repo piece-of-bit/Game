@@ -11,6 +11,7 @@ public class ConfirmationScript : MonoBehaviour
     bool PressNO;
     bool BUY;
     bool UPGRADE;
+    public Text message;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,19 +29,17 @@ public class ConfirmationScript : MonoBehaviour
         }
         else if (UPGRADE)
         {
-            Choice_Text.text = "Вы действительно хотите улучшить самолет за 1000";
+            Choice_Text.text = "Вы действительно хотите улучшить самолет за 100";
             Confirmation_window.SetActive(true);
             UPGRADE = false;
         }
         if (PressYES)
         {
-            Choice_Text.text = "кнопка да - рабоатет";
             Confirmation_window.SetActive(false);
             PressYES = false;
         }
         if (PressNO)
         {
-            Choice_Text.text = "кнопка нет - рабоатет";
             Confirmation_window.SetActive(false);
             PressNO = false;
         }

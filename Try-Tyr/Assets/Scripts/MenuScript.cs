@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
+    [SerializeField] private GameObject Panel;
     bool PressOpen;
     bool PressClose;
     bool PressGO;
@@ -21,7 +22,7 @@ public class MenuScript : MonoBehaviour
     {
         if (PressOpen)
         {
-            v.y += 0.02f;
+            v.y += 0.04f;
             slider.anchorMax = v;
             if (slider.anchorMax.y >= 1f)
             {
@@ -30,7 +31,7 @@ public class MenuScript : MonoBehaviour
         }
         if (PressClose)
         {
-            v.y -= 0.02f;
+            v.y -= 0.04f;
             slider.anchorMax = v;
             if (slider.anchorMax.y <= 0f)
             {
@@ -44,7 +45,9 @@ public class MenuScript : MonoBehaviour
             if (slider.anchorMax.y <= 0f)
             {
                 PressGO = false;
+                Panel.SetActive(true);
             }
+
         }
     }
     public void Open()
@@ -58,5 +61,11 @@ public class MenuScript : MonoBehaviour
     public void Go()
     {
         PressGO = true;
+        StartCoroutine(CloseObj());
+    }
+    IEnumerator CloseObj()
+    {
+        yield return new WaitForSeconds(5.0f);
+        Panel.SetActive(false);
     }
 }
