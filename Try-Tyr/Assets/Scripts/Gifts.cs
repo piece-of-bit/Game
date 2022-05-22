@@ -10,6 +10,7 @@ public class Gifts : MonoBehaviour
     [SerializeField] private GameObject C10;
     [SerializeField] private GameObject C5;
     [SerializeField] private GameObject C2;
+    [SerializeField] private GameObject Panel;
     public Text score;
     int koll;
     public Score money;
@@ -99,6 +100,7 @@ public class Gifts : MonoBehaviour
             {
                 money.MONEY = money.MONEY - 1000;
                 scratch = false;
+                Panel.SetActive(true);
             }
             if (c10)
             {
