@@ -11,6 +11,8 @@ public class MenuScript : MonoBehaviour
     bool PressClose;
     bool PressGO;
     public RectTransform slider;
+    public RectTransform slider2;
+    public RectTransform slider3;
     Vector2 v;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,8 @@ public class MenuScript : MonoBehaviour
         {
             v.y = 0f;
             slider.anchorMax = v;
+            slider2.anchorMax = v;
+            slider3.anchorMax = v;
             if (slider.anchorMax.y <= 0f)
             {
                 PressGO = false;
@@ -71,8 +75,23 @@ public class MenuScript : MonoBehaviour
     }
     IEnumerator CloseObj()
     {
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(4.2f);
         Panel.SetActive(false);
-        
+        StartCoroutine(CloseObj1());
+    }
+    IEnumerator CloseObj1()
+    {
+        yield return new WaitForSeconds(4.0f);
+        Panel.SetActive(true);
+        v.y = 0f;
+        slider.anchorMax = v;
+        slider2.anchorMax = v;
+        slider3.anchorMax = v;
+        StartCoroutine(CloseObj2());
+    }
+    IEnumerator CloseObj2()
+    {
+        yield return new WaitForSeconds(4.5f);
+        Panel.SetActive(false);
     }
 }

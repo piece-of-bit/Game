@@ -138,7 +138,7 @@ public class Airplane : MonoBehaviour
     }
     IEnumerator Fly_Time()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(8.0f);
         money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale;
         if(lvl_upgrade == 1)
         {
