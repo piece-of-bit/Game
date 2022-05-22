@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class ConfirmationScript : MonoBehaviour
 {
+    public string message_upgrade;
+    public string message_buy;
     [SerializeField] private Text Choice_Text;
     [SerializeField] private GameObject Confirmation_window;
     bool PressYES;
     bool PressNO;
     bool BUY;
     bool UPGRADE;
-    public Text message;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +24,13 @@ public class ConfirmationScript : MonoBehaviour
     {
         if (BUY)
         {
-            Choice_Text.text = "Вы действительно хотите приобрести самолет за 1000?";
+            Choice_Text.text = "Вы действительно хотите приобрести самолет за " + message_buy;
             Confirmation_window.SetActive(true);
             BUY = false;
         }
         else if (UPGRADE)
         {
-            Choice_Text.text = "Вы действительно хотите улучшить самолет за 100";
+            Choice_Text.text = "Вы действительно хотите улучшить самолет за " + message_upgrade;
             Confirmation_window.SetActive(true);
             UPGRADE = false;
         }

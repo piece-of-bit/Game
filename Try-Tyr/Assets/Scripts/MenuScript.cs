@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private GameObject Panel;
+    [SerializeField] private GameObject CLOSE;
     bool PressOpen;
     bool PressClose;
     bool PressGO;
@@ -22,11 +23,15 @@ public class MenuScript : MonoBehaviour
     {
         if (PressOpen)
         {
+            CLOSE.GetComponent<Button>().interactable = false;
+            CLOSE.GetComponent<Button>().enabled = false;
             v.y += 0.04f;
             slider.anchorMax = v;
             if (slider.anchorMax.y >= 1f)
             {
                 PressOpen = false;
+                CLOSE.GetComponent<Button>().interactable = true;
+                CLOSE.GetComponent<Button>().enabled = true;
             }
         }
         if (PressClose)
@@ -65,7 +70,7 @@ public class MenuScript : MonoBehaviour
     }
     IEnumerator CloseObj()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(4.0f);
         Panel.SetActive(false);
     }
 }
