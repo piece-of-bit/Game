@@ -10,29 +10,29 @@ public class Airplane : MonoBehaviour
     [SerializeField] private GameObject ICON;
     [SerializeField] private GameObject GO;
     [SerializeField] private GameObject UPGRADE;
-    bool yes;
-    bool no;
-    bool upgrade;
-    bool in_fly;
+    bool yes = false;
+    bool no = false;
+    bool upgrade = false;
+    bool in_fly = false;
     public Text Score_text;
     int lvl_upgrade = 1;
     double win_scale = 1;
     double price_scale = 1;
-    public void ClickUpgradeButton()
+    private void ClickUpgradeButton()
     {
         upgrade = true;
         text_for_confirm.message_upgrade = (100 * price_scale).ToString(); // передаваемое сообщение
     }
-    public void ClickGoButton()
+    private void ClickGoButton()
     {
         in_fly = true;
         StartCoroutine(Fly_Time());
     }
-    public void Yes()
+    private void Yes()
     {
         yes = true;
     }
-    public void No()
+    private void No()
     {
         no = true;
     }
@@ -66,7 +66,7 @@ public class Airplane : MonoBehaviour
                 YES.GetComponent<Button>().interactable = false;
                 YES.GetComponent<Button>().enabled = false;
             }
-            else if (money.MONEY >= 100 * price_scale)
+            else
             {
                 YES.GetComponent<Button>().interactable = true;
                 YES.GetComponent<Button>().enabled = true;

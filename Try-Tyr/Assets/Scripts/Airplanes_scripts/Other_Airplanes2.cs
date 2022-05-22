@@ -2,52 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Other_Airplanes : MonoBehaviour
+public class Other_Airplanes2 : MonoBehaviour
 {
-    public Score money;
+    public Score money; 
     public ConfirmationScript text_for_confirm;
     [SerializeField] private GameObject YES;
     [SerializeField] private GameObject ICON;
     [SerializeField] private GameObject GO;
     [SerializeField] private GameObject UPGRADE;
     [SerializeField] private GameObject BUY;
-    bool UNLOCK;
-    bool yes;
-    bool no;
-    bool buy;
-    bool upgrade;
-    bool in_fly;
-    int lvl_upgrade = 1;
-    double win_scale = 1;
-    double price_scale = 1;
-    public void ClickUpgradeButton()
+    bool UNLOCK2; 
+    bool yes2;
+    bool no2;
+    bool buy2;
+    bool upgrade2;
+    bool in_fly2;
+    int lvl_upgrade2 = 1;     //СДЕЛАТЬ РАЗНЫЕ ВЕЛИЧИНЫ У РАЗНЫХ САМОЛЕТОВ
+    double win_scale2 = 1;    //СДЕЛАТЬ РАЗНЫЕ ВЕЛИЧИНЫ У РАЗНЫХ САМОЛЕТОВ
+    double price_scale2 = 1;  //СДЕЛАТЬ РАЗНЫЕ ВЕЛИЧИНЫ У РАЗНЫХ САМОЛЕТОВ
+    public void ClickUpgradeButton2()
     {
-        upgrade = true;
-        text_for_confirm.message_upgrade = (100 * price_scale).ToString();
+        upgrade2 = true;
+        text_for_confirm.message_upgrade = (100 * price_scale2).ToString();
     }
-    public void ClickGoButton()
+    public void ClickGoButton2()
     {
-        in_fly = true;
-        StartCoroutine(Fly_Time());
+        in_fly2 = true;
+        StartCoroutine(Fly_Time2());
     }
-    public void ClickBuyButton()
+    public void ClickBuyButton2()
     {
-        buy = true;
+        buy2 = true;
         text_for_confirm.message_buy = (1000 * money.price_buy_scale).ToString();
     }
-    public void Yes()
+    public void Yes2()
     {
-        yes = true;
+        yes2 = true;
     }
-    public void No()
+    public void No2()
     {
-        no = true;
+        no2 = true;
     }
 
     void Update()
     {
         //проверка куплен ли самолет
-        if (UNLOCK)
+        if (UNLOCK2)
         {
             UPGRADE.SetActive(true);
             GO.SetActive(true);
@@ -60,14 +60,14 @@ public class Other_Airplanes : MonoBehaviour
             BUY.SetActive(true);
         }
         //ограничение уровня апгрейда
-        if (lvl_upgrade > 3)
+        if (lvl_upgrade2 > 3)
         {
             UPGRADE.GetComponent<Button>().interactable = false;
             UPGRADE.GetComponent<Button>().enabled = false;
         }
 
         //Пуск
-        if (in_fly)
+        if (in_fly2)
         {
             GO.GetComponent<Button>().interactable = false;
             GO.GetComponent<Button>().enabled = false;
@@ -79,68 +79,68 @@ public class Other_Airplanes : MonoBehaviour
         }
 
         //подтверждение выбора апгрейда
-        if (upgrade)
+        if (upgrade2)
         {
-            if (money.MONEY < 100 * price_scale)
+            if (money.MONEY < 100 * price_scale2)
             {
                 YES.GetComponent<Button>().interactable = false;
                 YES.GetComponent<Button>().enabled = false;
             }
-            else if (money.MONEY >= 100 * price_scale)
+            else if (money.MONEY >= 100 * price_scale2)
             {
                 YES.GetComponent<Button>().interactable = true;
                 YES.GetComponent<Button>().enabled = true;
 
-                if (yes)
+                if (yes2)
                 {
-                    money.MONEY = money.MONEY - 100 * price_scale;
-                    win_scale = lvl_upgrade * 2;
-                    lvl_upgrade += 1;   //увеличение цены и награды от уровня
-                    price_scale = lvl_upgrade * 2;
-                    upgrade = false;
-                    yes = false;
+                    money.MONEY = money.MONEY - 100 * price_scale2;
+                    win_scale2 = lvl_upgrade2 * 2;                            //Подогнать величины улучшений
+                    lvl_upgrade2 += 1;                                        //Подогнать величины улучшений
+                    price_scale2 = lvl_upgrade2 * 2;                          //Подогнать величины улучшений
+                    upgrade2 = false;
+                    yes2 = false;
                 }
-                else if (no)
+                else if (no2)
                 {
-                    upgrade = false;
-                    no = false;
+                    upgrade2 = false;
+                    no2 = false;
                 }
             }
         }
 
         //подтверждение выбора покупки
-        if (buy)
+        if (buy2)
         {
             if (money.MONEY < 1000 * money.price_buy_scale)
             {
                 YES.GetComponent<Button>().interactable = false;
                 YES.GetComponent<Button>().enabled = false;
             }
-            else if (money.MONEY >= 1000 * money.price_buy_scale)
+            else if (money.MONEY >= 100 * price_scale2)
             {
                 YES.GetComponent<Button>().interactable = true;
                 YES.GetComponent<Button>().enabled = true;
 
-                if (yes)
+                if (yes2)
                 {
                     money.MONEY = money.MONEY - 1000 * money.price_buy_scale;
                     money.price_buy_scale += 1;
-                    yes = false;
-                    buy = false;
-                    UNLOCK = true;
+                    buy2 = false;
+                    yes2 = false;
+                    UNLOCK2 = true;
                 }
-                else if (no)
+                else if (no2)
                 {
-                    buy = false;
-                    no = false;
+                    buy2 = false;
+                    no2 = false;
                 }
             }
         }
     }
-    IEnumerator Fly_Time()
+    IEnumerator Fly_Time2()
     {
         yield return new WaitForSeconds(8.0f);
-        money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale;
-        in_fly = false;
+        money.MONEY = money.MONEY + Random.Range(500, 501) * win_scale2;  // ПОРАБОТАТЬ С НАГРАДАМИ
+        in_fly2 = false;
     }
 }
