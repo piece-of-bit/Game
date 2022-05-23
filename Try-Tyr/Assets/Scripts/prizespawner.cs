@@ -12,7 +12,6 @@ public class prizespawner : MonoBehaviour
     void Start()
     {
         WhatToSpawn = Random.Range(1, 6);
-        Debug.Log(WhatToSpawn);
         switch (WhatToSpawn)
         {
             case 1:
