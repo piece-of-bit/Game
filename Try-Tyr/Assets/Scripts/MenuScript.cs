@@ -91,7 +91,7 @@ public class MenuScript : MonoBehaviour
     }
     IEnumerator CloseObj2()
     {
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5.5f);
         Panel.SetActive(false);
     }
 }
