@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &187519131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1581,7 +1581,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187519130}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &206947078
 GameObject:
   m_ObjectHideFlags: 0
@@ -15529,6 +15529,18 @@ MonoBehaviour:
           m_StringArgument: play
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5982443038683099736}
+        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
+        m_MethodName: PressCoin200
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1429652336026016633
 GameObject:
   m_ObjectHideFlags: 0
@@ -15680,18 +15692,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1429652336217944672}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: play
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5982443038683099736}
         m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
         m_MethodName: PressCoin200
@@ -15849,18 +15849,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2296038784557957979}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: play
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5982443038683099736}
         m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
         m_MethodName: PressCoin500
@@ -16015,6 +16003,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: play
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5982443038683099736}
+        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
+        m_MethodName: PressCoin500
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2296038784857005261
@@ -16455,6 +16455,18 @@ MonoBehaviour:
           m_StringArgument: play
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5982443038683099736}
+        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
+        m_MethodName: PressCoin300
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &6673594252347891900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16645,18 +16657,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6673594253177519892}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: play
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5982443038683099736}
         m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
         m_MethodName: PressCoin300
@@ -16814,18 +16814,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7327122255460478603}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: play
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5982443038683099736}
         m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
         m_MethodName: PressCoin100
@@ -16833,18 +16821,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17011,6 +16987,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: play
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5982443038683099736}
+        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
+        m_MethodName: PressCoin100
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7327122255742742813
@@ -17428,6 +17416,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: play
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5982443038683099736}
+        m_TargetAssemblyTypeName: COIN_WIN, Assembly-CSharp
+        m_MethodName: PressCoin5000
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7417863464502065823
